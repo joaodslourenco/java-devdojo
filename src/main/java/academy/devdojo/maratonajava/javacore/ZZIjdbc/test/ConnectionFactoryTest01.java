@@ -4,14 +4,12 @@ import academy.devdojo.maratonajava.javacore.ZZIjdbc.dominio.Producer;
 import academy.devdojo.maratonajava.javacore.ZZIjdbc.services.ProducerService;
 import lombok.extern.log4j.Log4j2;
 
-import java.util.List;
-
 @Log4j2
 public class ConnectionFactoryTest01 {
     public static void main(String[] args) {
         Producer producer = Producer.builder().name("Studio Maneiro").build();
 
-//        ProducerService.save(producer);
+        ProducerService.save(producer);
 
 //        ProducerService.update(11, "Studio Zika");
 
@@ -31,9 +29,9 @@ public class ConnectionFactoryTest01 {
 
 //        ProducerService.findByNameAndDelete("Tchongo");
 
-        List<Producer> zika = ProducerService.findByNamePreparedStmt("Zi");
+//        List<Producer> zika = ProducerService.findByNamePreparedStmt("Zi");
 
-        log.info(zika);
+//        log.info(zika);
 
     }
 }
